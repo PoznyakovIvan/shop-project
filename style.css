@@ -40,6 +40,10 @@ header {
     width: 50%;
 }
 
+.col-8 {
+    width: 66.6667%;
+}
+
 .col-9 {
     width: 75%;
 }
@@ -49,7 +53,7 @@ header {
 }
 
 .col-4 {
-    width: 33.3333%;
+    width: 33.33333%;
 }
 
 .logo {
@@ -97,9 +101,9 @@ header {
     width: 1em;
     margin: 0 0.15em 0 0.3em;
     vertical-align: -0.3em;
-    background-size: 1em 1em; 
+    background-size: 1em 1em;
     filter: invert(100%);
-   }
+}
 
 
 
@@ -201,75 +205,62 @@ input {
 
 main {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 25px 0;
 }
 
-.slider {
-    height: 400px;
-    background-color: rgba(35, 90, 147, 0.5);
-}
-
-.filter {
-    margin-right: 15px;
-    height: 840px;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.bread-crumbs {
+.breadcrumbs {
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-left: 15px;
     height: 64px;
 }
 
-ul.breadcrumbs {
+.breadcrumbs-list {
     list-style: none;
-  }
-  
-  ul.breadcrumbs li {
+}
+
+.breadcrumbs-list li {
     display: inline;
     font-size: 14px;
-  }
-  
-  ul.breadcrumbs li+li:before {
+}
+
+.breadcrumbs-list li+li:before {
     padding: 8px;
     color: #96b8dc;
     content: "\003E";
-  }
-  
-  ul.breadcrumbs li a {
-    color: #96b8dc;
-    text-decoration: none;
-  }
-  
-  ul.breadcrumbs li a span {
-      text-decoration: underline;
-  } 
-
-
-.product-title {
-    margin: 0 15px;
-    height: 100px;
-    margin-top: -5px;
 }
 
-.product-title h1 {
+.breadcrumbs-list li a {
+    color: #96b8dc;
+    text-decoration: none;
+}
+
+.breadcrumbs-list li a span {
+    text-decoration: underline;
+}
+
+.breadcrumbs-list li:hover a {
+    color: white;
+}
+
+.product-name {
+    text-indent: -2px;
+    height: 100px;
     font-weight: bold;
     font-size: 48px;
     color: white;
 }
-.sorting {
+
+
+.sort {
     position: relative;
-    margin-left: 15px;
     height: 100px;
 }
 
-.sorting li {
+.sort li {
     float: left;
     width: 100%;
 }
 
-.sorting a{
+.sort a {
     background-color: rgba(255, 255, 255, 0.5);
     padding-left: 20px;
     font-size: 21px;
@@ -278,12 +269,12 @@ ul.breadcrumbs {
     line-height: 40px;
     display: block;
     height: 40px;
-    top:0px;
+    top: 0px;
     border: 1px solid white;
     text-decoration: none;
 }
 
-.sorting li:hover a {
+.sort li:hover a {
     background-color: #2c71b8;
     color: white;
 }
@@ -299,11 +290,11 @@ ul.breadcrumbs {
     width: 1em;
     margin: 0 0.15em 0 0.3em;
     vertical-align: -0.3em;
-    background-size: 1em 1em; 
+    background-size: 1em 1em;
     filter: invert(100%);
-   }
+}
 
-.dropdown-content-2 {
+.dropdown-content-sort {
     position: absolute;
     font-size: 21px;
     z-index: 10;
@@ -311,47 +302,56 @@ ul.breadcrumbs {
     list-style: none;
 }
 
-.dropdown-content-2 li {
+.dropdown-content-sort li {
     border: none;
     width: 100%;
     height: 40px;
 }
 
-.dropdown-content-2 a {
+.dropdown-content-sort a {
     color: white;
     background-color: #2c71b8;
 }
 
-.sorting li:hover .dropdown-content-2 {
+.sort li:hover .dropdown-content-sort {
     display: block;
 }
 
-.sorting li:hover .key-2 {
+.sort li:hover .key-2 {
     display: block;
 }
 
-.sorting li .dropdown-content-2 a:hover {
+.sort li .dropdown-content-sort a:hover {
     color: #2c71b8;
     background-color: white;
 }
 
-.sorting li:hover .key1 {
+.sort li:hover .key1 {
     display: block;
 }
 
 
-.sorting::after {
+.sort::after {
     content: "";
     display: block;
     clear: both;
 }
+.w {
+    margin-right: -15px;
+}
 
 .product {
     border: 1px solid white;
-    margin: 0 15px 30px 15px;
+    margin-right: 30px;
+    margin-bottom: 30px;
     background-color: rgba(44, 113, 184, 0.75);
 }
-.product-face {
+
+.product:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.product-images {
     background-color: rgba(255, 255, 255, 0.75);
     height: 180px;
     margin-bottom: 15px;
@@ -359,7 +359,7 @@ ul.breadcrumbs {
 }
 
 
-.product-face img{
+.product-images img {
     position: absolute;
     display: block;
     margin: 0;
@@ -368,94 +368,99 @@ ul.breadcrumbs {
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
-.heart {
+
+.product-like {
     width: 30px;
     height: 30px;
     border: 1px solid #2c71b8;
-    background-image: url(images/heart.png);
+    background-image: url(images/product-like.png);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: 220px;
+    right: 10px;
     top: 50px;
 }
-.cube {
+
+.product-like:hover {
     width: 30px;
     height: 30px;
     border: 1px solid #2c71b8;
-    background-image: url(images/cube.png);
+    background-color: #2c71b8;
+    background-image: url(images/product-like-select.png);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: 220px;
+    right: 10px;
+    top: 50px;
+}
+.product-zoom {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #2c71b8;
+    background-image: url(images/product-zoom.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 10px;
     top: 10px;
 }
 
-.product-name {
+.product-zoom:hover {
+    width: 30px;
+    height: 30px;
+    background-color: #2c71b8;
+    border: 1px solid #2c71b8;
+    background-image: url(images/product-zoom-select.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.product-title {
     font-weight: bold;
     font-size: 30px;
     color: white;
     margin: 0 0 15px 15px;
 }
-.about p{
+
+.product-description p {
     font-size: 21px;
     font-weight: 100;
     color: white;
     margin: 0 0 15px 15px;
 }
-.type {
+
+.product-features {
     color: white;
     font-size: 21px;
     margin: 0 0 15px 15px;
 }
 
-.type span{
+.product-features span {
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.screen-size {
-    margin: 0 0 15px 15px;
-    color: white;
-    font-size: 21px;
-}
-
-.screen-size span {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.ram {
-    margin: 0 0 15px 15px;
-    color: white;
-    font-size: 21px;
-}
-
-.ram span {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.price div {
+.price {
     text-transform: uppercase;
     font-weight: bold;
     color: white;
     font-size: 48px;
     text-align: center;
-    float: left;
     margin: 0 auto;
 }
-.price .cent {
-    display: inline-block;
+
+.price sup {
     font-size: 30px;
-    padding-bottom: 10px;
 }
 
-.more{
+.btn {
+    display: block;
+    margin: 0 auto;
     padding: 0 25px;
     margin-bottom: 15px;
-}
-
-.more button {
     width: 210px;
     height: 50px;
     font-weight: bold;
@@ -464,40 +469,47 @@ ul.breadcrumbs {
     background-color: #2c71b8;
     border: 1px solid white;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
-.add-cart{
+.btn:hover {
+    display: block;
+    margin: 0 auto;
     padding: 0 25px;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.add-cart button {
+    margin-bottom: 15px;
     width: 210px;
     height: 50px;
     font-weight: bold;
     font-size: 21px;
     color: white;
     background-color: rgba(255, 255, 255, 0.2);
+    border:none;
     text-transform: uppercase;
-    border-color: transparent;
-}
-.cart1 {
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    border: none;
-    top: 9px;
-    right: 35px;
-    background-repeat: no-repeat;
-    background-image: url(images/cart2.png);
-    background-position: center;
     cursor: pointer;
 }
 
-.load-more h2{
-    font-size: 36px;
+.btn-add-to-cart {
+    margin-bottom: 30px;
+    justify-content: center;
+    background-image: url(images/cart2.png);
+    background-position: bottom 16px right 10px;
+    background-repeat: no-repeat;
+}
+
+.btn-add-to-cart:hover {
+    margin-bottom: 30px;
+    justify-content: center;
+    background-image: url(images/cart2.png);
+    background-position: bottom 16px right 10px;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.load-more {
     text-align: center;
+}
+.load-more a {
+    text-decoration: none;
+    font-size: 36px;
     color: white;
-    font-weight: 300;
 }
