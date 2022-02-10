@@ -171,11 +171,12 @@ input {
 }
 
 .cart-box {
+
     position: relative;
 }
 
 .cart {
-    margin: 5px 0px 0px 30px;
+    margin: 5px 0px 0px 33px;
     height: 40px;
     width: 40px;
     background: #ffffff;
@@ -207,7 +208,12 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.row {
+    margin-right: -15px;
+}
+
 .breadcrumbs {
+    margin: 0 15px;
     padding-top: 30px;
     padding-bottom: 30px;
     height: 64px;
@@ -244,6 +250,7 @@ main {
 .product-name {
     text-indent: -2px;
     height: 100px;
+    margin-left: 15px;
     font-weight: bold;
     font-size: 48px;
     color: white;
@@ -251,6 +258,7 @@ main {
 
 
 .sort {
+    margin-right: 15px;
     position: relative;
     height: 100px;
 }
@@ -336,20 +344,18 @@ main {
     display: block;
     clear: both;
 }
-.w {
-    margin-right: -15px;
-}
 
 .product {
     border: 1px solid white;
-    margin-right: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
     margin-bottom: 30px;
     background-color: rgba(44, 113, 184, 0.75);
 }
 
-.product:not(:nth-child(3n)) {
+/* .product:not(:nth-child(3n)) {
     margin-right: 30px;
-}
+} */
 
 .product-images {
     background-color: rgba(255, 255, 255, 0.75);
@@ -490,7 +496,6 @@ main {
 
 .btn-add-to-cart {
     margin-bottom: 30px;
-    justify-content: center;
     background-image: url(images/cart2.png);
     background-position: bottom 16px right 10px;
     background-repeat: no-repeat;
@@ -498,7 +503,6 @@ main {
 
 .btn-add-to-cart:hover {
     margin-bottom: 30px;
-    justify-content: center;
     background-image: url(images/cart2.png);
     background-position: bottom 16px right 10px;
     background-repeat: no-repeat;
@@ -507,6 +511,7 @@ main {
 
 .load-more {
     text-align: center;
+    margin-top: 10px;
 }
 .load-more a {
     text-decoration: none;
